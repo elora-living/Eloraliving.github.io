@@ -216,7 +216,58 @@
 
         .style:hover {
             background: #eee8de;
-        }
+        }.style-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.style-card {
+    min-height: 230px;
+    padding: 30px;
+    border: 1px solid #d9d3ca;
+    background: #fffdf9;
+    color: #292722;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all 0.3s ease;
+}
+
+.style-card:hover {
+    background: #eee8de;
+    transform: translateY(-4px);
+}
+
+.style-number {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #8a8379;
+    margin-bottom: auto;
+}
+
+.style-card h3 {
+    font-family: Georgia, serif;
+    font-size: 31px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.style-card p {
+    color: #68645c;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.style-card span {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #292722;
+}
 
         .journal-grid {
             max-width: 1100px;
@@ -284,7 +335,9 @@
 
             .styles {
                 grid-template-columns: repeat(2, 1fr);
-            }
+            } .style-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
 
             .journal-grid {
                 grid-template-columns: 1fr;
@@ -295,7 +348,9 @@
             }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 500px) {.style-grid {
+    grid-template-columns: 1fr;
+}
             .logo {
                 font-size: 22px;
             }
@@ -365,7 +420,7 @@
         <div class="section-heading">
             <h2>Where will you begin?</h2>
             <p>
-                Every beautiful sacturay starts somewhere,choose a space and we shall create.
+                Every beautiful sacturay starts somewhere,choose a space and begin creating.
             </p>
         </div>
 
@@ -395,37 +450,87 @@
             <h2>lets turn your imagination into a space you love-without breaking the bank .</h2>
 
             <p>
-                From cosy bedrooms to luxaury living rooms here at elora living we help you create the space of your dreams
-                all while including .
+                From cosy bedrooms to luxurious living rooms, 
+                here at Elora Living,
+                we're here to help you create the space of your dreams — with carefully selected inspiration and affordable finds that feel like you
             </p>
 
-            <a href="#journal" class="button">Find inspiration</a>
+            <a href="#journal" class="button">Step into your sancturary</a>
         </div>
     </section>
 
     <section id="styles">
-        <div class="section-heading">
-            <h2>Find your style</h2>
-            <p>
-                What kind of space are you dreaming of?
-            </p>
-        </div>
 
-        <div class="styles">
+<div class="section-heading">
+<h2>What feels like you?</h2>
 
-            <a href="#" class="style">Minimal</a>
+<p>
+Every home has its own feeling. Discover the styles that inspire you and find the little details that could make your space feel truly yours.
+</p>
 
-            <a href="#" class="style">Cosy</a>
+</div>
 
-            <a href="#" class="style">Modern</a>
+<div class="style-grid">
 
-            <a href="#" class="style">Neutral</a>
+<a href="styles/serene.html" class="style-card">
+<div class="style-number">01</div>
+<h3>Serene</h3>
+<p>Soft, peaceful & effortlessly beautiful.</p>
+<span>Step inside →</span>
+</a>
 
-            <a href="#" class="style">Luxury</a>
+<a href="styles/elevated.html" class="style-card">
+<div class="style-number">02</div>
+<h3>Elevated</h3>
+<p>Elegant, refined & timeless.</p>
+<span>Step inside →</span>
+</a>
 
-        </div>
-    </section>
+<a href="styles/refined.html" class="style-card">
+<div class="style-number">03</div>
+<h3>Refined</h3>
+<p>Modern, sleek & sophisticated.</p>
+<span>Step inside →</span>
+</a>
 
+<a href="styles/romantic.html" class="style-card">
+<div class="style-number">04</div>
+<h3>Romantic</h3>
+<p>Soft, feminine & charming.</p>
+<span>Step inside →</span>
+</a>
+
+<a href="styles/cosy.html" class="style-card">
+<div class="style-number">05</div>
+<h3>Cosy</h3>
+<p>Warm, inviting & comforting.</p>
+<span>Step inside →</span>
+</a>
+
+<a href="styles/organic.html" class="style-card">
+<div class="style-number">06</div>
+<h3>Organic</h3>
+<p>Natural, earthy & relaxed.</p>
+<span>Step inside →</span>
+</a>
+
+<a href="styles/timeless.html" class="style-card">
+<div class="style-number">07</div>
+<h3>Timeless</h3>
+<p>Classic, elegant & enduring.</p>
+<span>Step inside →</span>
+</a>
+
+<a href="styles/minimal.html" class="style-card">
+<div class="style-number">08</div>
+<h3>Minimal</h3>
+<p>Calm, simple & uncluttered.</p>
+<span>Step inside →</span>
+</a>
+
+</div>
+
+</section>
     <section id="journal">
         <div class="section-heading">
             <h2>The Elora Journal</h2>
