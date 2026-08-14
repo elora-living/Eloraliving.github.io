@@ -1,1 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elora Living | Beautiful Homes, Affordable Finds</title>
+    <meta name="description" content="Elora Living brings you beautiful home decor inspiration and affordable finds to help you create a home you love.">
 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #292722;
+            background: #faf8f4;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #faf8f4;
+            border-bottom: 1px solid #e6e1d8;
+            padding: 20px 6%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            letter-spacing: 1px;
+            font-weight: normal;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #292722;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background: #eee8de;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .small-heading {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(45px, 7vw, 82px);
+            font-weight: normal;
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 570px;
+            margin: 0 auto 35px;
+            font-size: 17px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #292722;
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .button:hover {
+            background: #4a4740;
+        }
+
+        section {
+            padding: 90px 6%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            max-width: 600px;
+            margin: auto;
+            color: #68645c;
+        }
+
+        .room-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .room {
+            min-height: 260px;
+            background: #e5ded2;
+            display: flex;
+            align-items: flex-end;
+            padding: 25px;
+            text-decoration: none;
+            color: #292722;
+        }
+
+        .room:nth-child(2) {
+            background: #ded8ce;
+        }
+
+        .room:nth-child(3) {
+            background: #e9e3d9;
+        }
+
+        .room:nth-child(4) {
+            background: #dcd5ca;
+        }
+
+        .room h3 {
+            font-family: Georgia, serif;
+            font-size: 27px;
+            font-weight: normal;
+        }
+
+        .intro {
+            background: #292722;
+            color: white;
+            text-align: center;
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .intro h2 {
+            font-family: Georgia, serif;
+            font-size: 46px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            color: #e2ded6;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .intro .button {
+            background: white;
+            color: #292722;
+        }
+
+        .styles {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .style {
+            border: 1px solid #d9d3ca;
+            padding: 25px 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #292722;
+            font-family: Georgia, serif;
+        }
+
+        .style:hover {
+            background: #eee8de;
+        }
+
+        .journal-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .article {
+            background: white;
+            padding: 30px;
+            border: 1px solid #e6e1d8;
+        }
+
+        .article span {
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #777168;
+        }
+
+        .article h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: normal;
+            margin: 15px 0;
+        }
+
+        .article a {
+            color: #292722;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            background: #eee8de;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        footer .logo {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #68645c;
+        }
+
+        @media (max-width: 800px) {
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .room-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .styles {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .journal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 5%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .logo {
+                font-size: 22px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 550px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .room-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading h2,
+            .intro h2 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Elora Living</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#styles">Styles</a></li>
+            <li><a href="#journal">Inspiration</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="home">
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="small-heading">Welcome to Elora Living</div>
+
+            <h1>Beautiful spaces.<br>Beautifully lived.</h1>
+
+            <p>
+                Discover affordable home decor inspiration and carefully selected finds
+                to help you create a home you truly love.
+            </p>
+
+            <a href="#rooms" class="button">Explore the rooms</a>
+        </div>
+    </section>
+
+    <section id="rooms">
+        <div class="section-heading">
+            <h2>Shop by room</h2>
+            <p>
+                Find inspiration for every corner of your home.
+            </p>
+        </div>
+
+        <div class="room-grid">
+
+            <a href="#" class="room">
+                <h3>Bedroom</h3>
+            </a>
+
+            <a href="#" class="room">
+                <h3>Living Room</h3>
+            </a>
+
+            <a href="#" class="room">
+                <h3>Bathroom</h3>
+            </a>
+
+            <a href="#" class="room">
+                <h3>Kitchen</h3>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="intro-content">
+            <h2>Your dream home doesn't have to cost a fortune.</h2>
+
+            <p>
+                From cosy bedrooms to stylish living spaces, discover affordable
+                pieces and simple ideas that can completely transform your home.
+            </p>
+
+            <a href="#journal" class="button">Find inspiration</a>
+        </div>
+    </section>
+
+    <section id="styles">
+        <div class="section-heading">
+            <h2>Find your style</h2>
+            <p>
+                What kind of space are you dreaming of?
+            </p>
+        </div>
+
+        <div class="styles">
+
+            <a href="#" class="style">Minimal</a>
+
+            <a href="#" class="style">Cosy</a>
+
+            <a href="#" class="style">Modern</a>
+
+            <a href="#" class="style">Neutral</a>
+
+            <a href="#" class="style">Luxury</a>
+
+        </div>
+    </section>
+
+    <section id="journal">
+        <div class="section-heading">
+            <h2>The Elora Journal</h2>
+            <p>
+                Simple ideas, styling inspiration and affordable ways to make your
+                home feel like you.
+            </p>
+        </div>
+
+        <div class="journal-grid">
+
+            <article class="article">
+                <span>Bedroom</span>
+                <h3>7 ways to make your bedroom look more expensive</h3>
+                <a href="#">Read more →</a>
+            </article>
+
+            <article class="article">
+                <span>Budget Decor</span>
+                <h3>How to decorate your home beautifully on a budget</h3>
+                <a href="#">Read more →</a>
+            </article>
+
+            <article class="article">
+                <span>Inspiration</span>
+                <h3>Small bedroom ideas that actually make a difference</h3>
+                <a href="#">Read more →</a>
+            </article>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="logo">Elora Living</div>
+    <p>Beautiful spaces. Affordable finds. Inspired living.</p>
+    <p>© 2026 Elora Living. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
