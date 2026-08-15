@@ -121,19 +121,15 @@ h2 {
     margin-top: 45px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-.inspiration {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
-    
+
 .inspiration-box {
     min-height: 330px;
     position: relative;
     overflow: hidden;
     background: #dfd1c0;
+    border-radius: 4px;
 }
 
 .inspiration-box img {
@@ -141,7 +137,7 @@ h2 {
     height: 330px;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease;
 }
 
 .inspiration-box:hover img {
@@ -153,10 +149,10 @@ h2 {
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 45px 25px 22px;
+    padding: 55px 25px 22px;
     background: linear-gradient(
         transparent,
-        rgba(35, 30, 25, 0.65)
+        rgba(35, 30, 25, 0.68)
     );
     color: white;
 }
@@ -179,8 +175,6 @@ h2 {
 .inspiration-box:nth-child(4) {
     background: #d4c4b1;
 }
-
-.inspiration-box h3 {
     font-family: Georgia, serif;
     font-size: 26px;
     font-weight: normal;
