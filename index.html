@@ -132,41 +132,75 @@
             color: #68645c;
         }
 
-        .room-grid {
-            max-width: 1200px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
+       .room-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
-        .room {
-            min-height: 260px;
-            background: #e5ded2;
-            display: flex;
-            align-items: flex-end;
-            padding: 25px;
-            text-decoration: none;
-            color: #292722;
-        }
+.room {
+    min-height: 360px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: white;
+    background: #e5ded2;
+    border-radius: 4px;
+}
 
-        .room:nth-child(2) {
-            background: #ded8ce;
-        }
+.room img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
 
-        .room:nth-child(3) {
-            background: #e9e3d9;
-        }
+.room:hover img {
+    transform: scale(1.04);
+}
 
-        .room:nth-child(4) {
-            background: #dcd5ca;
-        }
+.room::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(
+        transparent,
+        rgba(35, 30, 25, 0.68)
+    );
+    pointer-events: none;
+}
 
-        .room h3 {
-            font-family: Georgia, serif;
-            font-size: 27px;
-            font-weight: normal;
-        }
+.room-label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 55px 25px 22px;
+    color: white;
+    z-index: 2;
+}
+
+.room-label h3 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0 0 4px;
+}
+
+.room-label span {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
 
         .intro {
             background: #292722;
@@ -409,7 +443,7 @@
             <h1>Beautiful living.<br>Made your way.</h1>
 
             <p>
-                Come along with us as we create a beautiful sanctury you'll love to come home too.
+                Come along with us as we create a beautiful sanctuary you'll love to come home too.
             </p>
 
             <a href="#rooms" class="button">Lets begin your journey</a>
@@ -420,29 +454,45 @@
         <div class="section-heading">
             <h2>Where will you begin?</h2>
             <p>
-                Every beautiful sacturay starts somewhere,choose a space and begin creating.
+                Every beautiful sanctuary starts somewhere,Choose a space and begin creating.
             </p>
         </div>
 
-        <div class="room-grid">
+       <div class="room-grid">
 
-            <a href="#" class="room">
-                <h3>Bedroom</h3>
-            </a>
-
-            <a href="#" class="room">
-                <h3>Living Room</h3>
-            </a>
-
-            <a href="#" class="room">
-                <h3>Bathroom</h3>
-            </a>
-
-            <a href="#" class="room">
-                <h3>Kitchen</h3>
-            </a>
-
+    <a href="#" class="room">
+        <img src="images/bedroom.jpg" alt="Bedroom inspiration">
+        <div class="room-label">
+            <h3>Bedroom</h3>
+            <span>Rest • Relax • Recharge</span>
         </div>
+    </a>
+
+    <a href="#" class="room">
+        <img src="images/living-room.jpg" alt="Living room inspiration">
+        <div class="room-label">
+            <h3>Living Room</h3>
+            <span>Gather • Relax • Stay awhile</span>
+        </div>
+    </a>
+
+    <a href="#" class="room">
+        <img src="images/bathroom.jpg" alt="Bathroom inspiration">
+        <div class="room-label">
+            <h3>Bathroom</h3>
+            <span>Unwind • Refresh • Reset</span>
+        </div>
+    </a>
+
+    <a href="#" class="room">
+        <img src="images/kitchen.jpg" alt="Kitchen inspiration">
+        <div class="room-label">
+            <h3>Kitchen</h3>
+            <span>Gather • Cook • Create</span>
+        </div>
+    </a>
+
+</div>
     </section>
 
     <section class="intro">
@@ -455,17 +505,18 @@
                 we're here to help you create the space of your dreams — with carefully selected inspiration and affordable finds that feel like you
             </p>
 
-            <a href="#journal" class="button">Step into your sancturary</a>
+            <a href="#journal" class="button">Step into your sanctury</a>
         </div>
     </section>
 
     <section id="styles">
 
 <div class="section-heading">
-<h2>What feels like you?</h2>
+<h2>What space captivate you?</h2>
 
 <p>
-Every home has its own feeling. Discover the styles that inspire you and find the little details that could make your space feel truly yours.
+from cosy and romantic to modern and effortlessly elegant,discover the colour,texture,and style that speaks to you.
+    find the little details that make your space feel truly yours.
 </p>
 
 </div>
