@@ -304,40 +304,76 @@
 }
 
         .journal-grid {
-            max-width: 1100px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
 
-        .article {
-            background: white;
-            padding: 30px;
-            border: 1px solid #e6e1d8;
-        }
+.article {
+    background: white;
+    border: 1px solid #e6e1d8;
+    overflow: hidden;
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
 
-        .article span {
-            text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: 2px;
-            color: #777168;
-        }
+.article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(35, 30, 25, 0.12);
+}
 
-        .article h3 {
-            font-family: Georgia, serif;
-            font-size: 25px;
-            font-weight: normal;
-            margin: 15px 0;
-        }
+.article-image {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
 
-        .article a {
-            color: #292722;
-            text-decoration: none;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.article:hover .article-image img {
+    transform: scale(1.05);
+}
+
+.article-content {
+    padding: 25px 28px 28px;
+}
+
+.article span {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #777168;
+}
+
+.article h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 1.3;
+    margin: 14px 0 18px;
+}
+
+.article a {
+    color: #292722;
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: letter-spacing 0.3s ease;
+}
+
+.article a:hover {
+    letter-spacing: 2px;
+}
 
         footer {
             background: #eee8de;
@@ -593,25 +629,45 @@ from cosy and romantic to modern and effortlessly elegant,discover the colour,te
 
         <div class="journal-grid">
 
-            <article class="article">
-                <span>Bedroom</span>
-                <h3>7 ways to make your bedroom look more expensive</h3>
-                <a href="#">Read more →</a>
-            </article>
-
-            <article class="article">
-                <span>Budget Decor</span>
-                <h3>How to decorate your home beautifully on a budget</h3>
-                <a href="#">Read more →</a>
-            </article>
-
-            <article class="article">
-                <span>Inspiration</span>
-                <h3>Small bedroom ideas that actually make a difference</h3>
-                <a href="#">Read more →</a>
-            </article>
-
+    <article class="article">
+        <div class="article-image">
+            <img src="images/journal-bedroom.jpg" alt="Cosy bedroom inspiration">
         </div>
+
+        <div class="article-content">
+            <span>Bedroom</span>
+            <h3>Turn Your Bedroom Into a Cosy Escape</h3>
+            <a href="#">Read more →</a>
+        </div>
+    </article>
+
+
+    <article class="article">
+        <div class="article-image">
+            <img src="images/journal-home.jpg" alt="Beautiful home decor on a budget">
+        </div>
+
+        <div class="article-content">
+            <span>Budget Decor</span>
+            <h3>Beautiful Doesn't Have to Mean Expensive</h3>
+            <a href="#">Read more →</a>
+        </div>
+    </article>
+
+
+    <article class="article">
+        <div class="article-image">
+            <img src="images/journal-small-bedroom.jpg" alt="Small bedroom inspiration">
+        </div>
+
+        <div class="article-content">
+            <span>Inspiration</span>
+            <h3>Small Space, Big Feeling</h3>
+            <a href="#">Read more →</a>
+        </div>
+    </article>
+
+</div>
     </section>
 
 </main>
