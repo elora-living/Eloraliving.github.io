@@ -114,7 +114,51 @@ nav a {
     margin: auto;
     color: #68645c;
 }
+.inspiration {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
 
+.inspiration-box {
+    min-height: 330px;
+    position: relative;
+    overflow: hidden;
+    background: #dfd1c0;
+}
+
+.inspiration-box img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.inspiration-box:hover img {
+    transform: scale(1.04);
+}
+
+.inspiration-label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 45px 25px 22px;
+    background: linear-gradient(
+        transparent,
+        rgba(35, 30, 25, 0.65)
+    );
+    color: white;
+}
+
+.inspiration-label h3 {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: normal;
+    margin: 0;
+}
 </style>
 
 </head>
@@ -172,6 +216,53 @@ The best living rooms aren't just beautiful to look at. They're the spaces where
 </div>
 
 </section>
+    
+    <section>
+
+<div class="content">
+
+<h2>The feeling of home.</h2>
+
+<p class="text">
+From the way you arrange your furniture to the textures you bring into the room, the smallest choices can change how a living room feels.
+</p>
+
+<div class="inspiration">
+
+    <div class="inspiration-box">
+        <img src="../images/livingroom-main.jpg" alt="Comfortable living room">
+        <div class="inspiration-label">
+            <h3>Comfort</h3>
+        </div>
+    </div>
+
+    <div class="inspiration-box">
+        <img src="../images/livingroom-main.jpg" alt="Warm living room lighting">
+        <div class="inspiration-label">
+            <h3>Warm lighting</h3>
+        </div>
+    </div>
+
+    <div class="inspiration-box">
+        <img src="../images/livingroom-main.jpg" alt="Natural living room textures">
+        <div class="inspiration-label">
+            <h3>Natural textures</h3>
+        </div>
+    </div>
+
+    <div class="inspiration-box">
+        <img src="../images/livingroom-main.jpg" alt="Living room designed for connection">
+        <div class="inspiration-label">
+            <h3>Connection</h3>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
 </main>
 
 </body>
