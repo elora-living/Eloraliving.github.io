@@ -114,7 +114,74 @@ h2 {
     color: #68645c;
     max-width: 650px;
 }
+.inspiration {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
 
+.inspiration-box {
+    min-height: 330px;
+    position: relative;
+    overflow: hidden;
+    background: #dfd1c0;
+}
+
+.inspiration-box img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.inspiration-box:hover img {
+    transform: scale(1.04);
+}
+
+.inspiration-label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 45px 25px 22px;
+    background: linear-gradient(
+        transparent,
+        rgba(35, 30, 25, 0.65)
+    );
+    color: white;
+}
+
+.inspiration-label h3 {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: normal;
+    margin: 0;
+}
+    .features {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    border-top: 1px solid #d9d3ca;
+    padding-top: 20px;
+}
+
+.feature h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #68645c;
+    font-size: 14px;
+}
 </style>
 
 </head>
@@ -168,6 +235,100 @@ A space to slow down, unwind and enjoy the little rituals that make everyday lif
         <p class="text">
             The most comforting bathrooms aren't about perfection. They're about creating a little space to pause, unwind and enjoy the simple rituals that make you feel at home.
         </p>
+
+    </div>
+
+</section>
+
+    <section>
+
+    <div class="content">
+
+        <h2>The details that make it yours.</h2>
+
+        <p class="text">
+            It's the little details that turn an everyday bathroom into a space that feels calm, comforting and completely your own.
+        </p>
+
+        <div class="inspiration">
+
+            <div class="inspiration-box">
+                <img src="../images/bathroom-softness.jpg" alt="Soft bathroom towels and textures">
+                <div class="inspiration-label">
+                    <h3>Softness</h3>
+                </div>
+            </div>
+
+            <div class="inspiration-box">
+                <img src="../images/bathroom-glow.jpg" alt="Warm bathroom lighting">
+                <div class="inspiration-label">
+                    <h3>Glow</h3>
+                </div>
+            </div>
+
+            <div class="inspiration-box">
+                <img src="../images/bathroom-nature.jpg" alt="Natural bathroom textures and greenery">
+                <div class="inspiration-label">
+                    <h3>Nature</h3>
+                </div>
+            </div>
+
+            <div class="inspiration-box">
+                <img src="../images/bathroom-rituals.jpg" alt="Relaxing bathroom details">
+                <div class="inspiration-label">
+                    <h3>Rituals</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section>
+
+    <div class="content">
+
+        <h2>Make time for yourself.</h2>
+
+        <p class="text">
+            The smallest rituals can turn an ordinary bathroom into a space that feels calm, comforting and completely yours.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+
+                <h3>01 — Pause</h3>
+
+                <p>
+                    Give yourself a moment to slow down, breathe and leave the rush of the day behind.
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <h3>02 — Soften</h3>
+
+                <p>
+                    Surround yourself with warm light, soft towels and little details that make everyday routines feel more comforting.
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <h3>03 — Unwind</h3>
+
+                <p>
+                    Create a space that encourages you to linger a little longer and enjoy having a moment to yourself.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
