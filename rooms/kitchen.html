@@ -121,7 +121,32 @@ h2 {
     color: #68645c;
     max-width: 650px;
 }
+.moments {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
 
+.moment h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.moment p {
+    color: #68645c;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+
+    .moments {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
 /* INSPIRATION */
 
 .inspiration {
