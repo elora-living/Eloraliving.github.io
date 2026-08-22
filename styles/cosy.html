@@ -110,31 +110,43 @@ section {
 }
 
 .room-card {
-    min-height: 300px;
-    padding: 30px;
-    background: #e5d8c8;
-    color: #292722;
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+    color: white;
     text-decoration: none;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    transition: 0.3s ease;
+    align-items: flex-end;
+    background: #dfd1c0;
 }
 
-.room-card:nth-child(2) {
-    background: #ded2c4;
+.room-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
 }
 
-.room-card:nth-child(3) {
-    background: #e9dfd3;
+.room-card:hover img {
+    transform: scale(1.04);
 }
 
-.room-card:nth-child(4) {
-    background: #d8cbbb;
+.room-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 35%,
+        rgba(35, 30, 25, 0.72)
+    );
 }
 
-.room-card:hover {
-    transform: translateY(-5px);
+.room-card-content {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
 }
 
 .room-card h3 {
@@ -146,7 +158,7 @@ section {
 
 .room-card p {
     max-width: 350px;
-    color: #5f594f;
+    color: #f3eee7;
     margin-bottom: 18px;
 }
 
@@ -253,29 +265,66 @@ Choose a room and let's start creating a space that feels like home.
 
 <div class="room-grid">
 
-
 <a href="../rooms/cosy-bedroom.html" class="room-card">
 
-<h3>Bedroom</h3>
+    <img src="../images/cosy-bedroom-hero.avif" alt="Cosy bedroom">
 
-<p>
-Soft textures, warm tones and a peaceful place to unwind.
-</p>
-
-<span>Explore bedroom →</span>
+    <div class="room-card-content">
+        <h3>Bedroom</h3>
+        <p>
+            Soft textures, warm tones and a peaceful place to unwind.
+        </p>
+        <span>Explore bedroom →</span>
+    </div>
 
 </a>
 
 
-<a href="#" class="room-card">
+<a href="../rooms/living-room.html" class="room-card">
 
-<h3>Living Room</h3>
+    <img src="../images/livingroom-main.jpg" alt="Cosy living room">
 
-<p>
-Layered textures, comfortable pieces and somewhere to relax.
-</p>
+    <div class="room-card-content">
+        <h3>Living Room</h3>
+        <p>
+            Layered textures, comfortable pieces and somewhere to relax.
+        </p>
+        <span>Explore living room →</span>
+    </div>
 
-<span>Coming soon →</span>
+</a>
+
+
+<a href="../rooms/kitchen.html" class="room-card">
+
+    <img src="../images/kitchen-main.jpg" alt="Cosy kitchen">
+
+    <div class="room-card-content">
+        <h3>Kitchen</h3>
+        <p>
+            Warm details and welcoming touches for the heart of your home.
+        </p>
+        <span>Explore kitchen →</span>
+    </div>
+
+</a>
+
+
+<a href="../rooms/bathroom.html" class="room-card">
+
+    <img src="../images/bathroom.jpg" alt="Cosy bathroom">
+
+    <div class="room-card-content">
+        <h3>Bathroom</h3>
+        <p>
+            Create a calm little escape with comforting details.
+        </p>
+        <span>Explore bathroom →</span>
+    </div>
+
+</a>
+
+</div>
 
 </a>
 
