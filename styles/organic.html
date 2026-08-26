@@ -1,1 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Organic | Elora Living</title>
+
+<meta name="description" content="Discover organic home inspiration with Elora Living.">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #292722;
+    background: #faf8f4;
+    line-height: 1.6;
+}
+
+header {
+    background: #faf8f4;
+    border-bottom: 1px solid #e6e1d8;
+    padding: 20px 6%;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #292722;
+    font-size: 13px;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 110px 20px;
+    background: #e8e1d6;
+}
+
+.hero small {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    color: #777168;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(50px, 8vw, 90px);
+    font-weight: normal;
+    margin: 15px 0;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #68645c;
+    font-size: 17px;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 6%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #68645c;
+}
+
+/* ROOM GRID */
+
+.room-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.room-card {
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    background: #d9d0c2;
+}
+
+.room-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.room-card:hover img {
+    transform: scale(1.04);
+}
+
+.room-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 35%,
+        rgba(35, 30, 25, 0.72)
+    );
+}
+
+.room-card-content {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+}
+
+.room-card h3 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.room-card p {
+    max-width: 350px;
+    color: #f3eee7;
+    margin-bottom: 18px;
+}
+
+.room-card span {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+/* BUTTON */
+
+.back {
+    text-align: center;
+    padding-top: 0;
+}
+
+.button {
+    display: inline-block;
+    background: #292722;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* FOOTER */
+
+footer {
+    background: #eee8de;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer .logo {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #68645c;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">Elora Living</div>
+
+<a href="../index.html">Back to Elora →</a>
+
+</nav>
+
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<small>Discover your style</small>
+
+<h1>Organic</h1>
+
+<p>
+Inspired by nature, made for living.
+Bring the beauty of nature indoors with soft textures, natural materials and earthy tones that make home feel calm, comfortable and easy to live in.
+</p>
+
+</section>
+
+
+<!-- ROOMS -->
+
+<section>
+
+<div class="section-heading">
+
+<h2>Let nature find its way home.</h2>
+
+<p>
+From natural textures to earthy tones and the little details you choose to live with, it's the simple things that can make a space feel calm, connected and completely your own.
+</p>
+
+</div>
+
+
+<div class="room-grid">
+
+
+<a href="../rooms/cosy-bedroom.html" class="room-card">
+
+    <img
+    src="../images/organic-bedroom.jpg"
+    alt="Organic bedroom">
+
+    <div class="room-card-content">
+
+        <h3>Bedroom</h3>
+
+        <p>
+        Soft linen, natural textures and gentle earthy tones come together to create a bedroom that feels peaceful, restful and beautifully at ease.
+        </p>
+
+        <span>Explore bedroom →</span>
+
+    </div>
+
+</a>
+
+
+<a href="../rooms/living-room.html" class="room-card">
+
+    <img
+    src="../images/organic-living-room.jpg"
+    alt="Organic living room">
+
+    <div class="room-card-content">
+
+        <h3>Living Room</h3>
+
+        <p>
+        Layer wood, stone and tactile fabrics to create a living room that feels warm, natural and easy to settle into.
+        </p>
+
+        <span>Explore living room →</span>
+
+    </div>
+
+</a>
+
+
+<a href="../rooms/kitchen.html" class="room-card">
+
+    <img
+    src="../images/organic-kitchen.jpg"
+    alt="Organic kitchen">
+
+    <div class="room-card-content">
+
+        <h3>Kitchen</h3>
+
+        <p>
+        Natural materials, earthy colours and little thoughtful touches come together to make the kitchen feel warm, welcoming and full of life.
+        </p>
+
+        <span>Explore kitchen →</span>
+
+    </div>
+
+</a>
+
+
+<a href="../rooms/bathroom.html" class="room-card">
+
+    <img
+    src="../images/organic-bathroom.jpg"
+    alt="Organic bathroom">
+
+    <div class="room-card-content">
+
+        <h3>Bathroom</h3>
+
+        <p>
+        Soft stone, warm wood and natural details create a quiet little space to slow down, breathe and feel at ease.
+        </p>
+
+        <span>Explore bathroom →</span>
+
+    </div>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+<!-- FUTURE CREATE SPACE -->
+
+<section class="back">
+
+<a href="#" class="button">
+Create your space →
+</a>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="logo">Elora Living</div>
+
+<p>Beautiful living, made your way.</p>
+
+</footer>
+
+</body>
+
+</html>
